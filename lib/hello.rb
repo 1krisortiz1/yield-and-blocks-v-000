@@ -1,5 +1,6 @@
 def hello_t(array)
-  i = 0
+  if block_given? #refactors the method so it can be called either with or without a block.
+    i = 0
 
   while i < array.length
     yield array[i]
